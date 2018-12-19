@@ -1,0 +1,69 @@
+﻿html, body {
+
+}
+
+.login-section {
+    width: 100%;
+    height: 100%;
+    min-height: 100%;
+}
+
+.login-box {
+    width: 100%;
+    max-width: 400px;
+    margin: auto;
+    margin-bottom: 10px;
+    padding: 40px 50px;
+    background: #fff;
+    border-radius: 7px;
+    border: 1px solid rgba(0, 148, 255, .6);
+}
+
+.login-logo {
+    width: 100%;
+}
+
+.input-group {
+  padding-bottom: 1em;
+}
+
+.input-group .invalid-feedback {
+  position: absolute;
+  left: 0;
+  top: 2.5em;
+}
+
+.dashboard-section {
+    margin: 30px 15px;
+}
+
+.list-group .active {
+    background-color: antiquewhite;
+    color: #808080;
+    border: 1px solid rgba(0, 0, 0, .2);
+}
+
+.location-finder {
+    width: 300px;
+    position: fixed;
+    z-index: 10;
+    background: #f1f5f9;
+    margin: 10px 8px;
+    border-radius: 4px;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+    box-shadow: 0 7px 14px 0 rgba(50,50,93,.1), 0 3px 6px 0 rgba(0,0,0,.07);
+}
+
+.street-view-section {
+    width: 300px;
+    height: 200px;
+    position: fixed;
+    z-index: 5;
+    background: #f1f5f9;
+    margin: -210px 8px;
+    border-radius: 4px;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+    box-shadow: 0 7px 14px 0 rgba(50,50,93,.1), 0 3px 6px 0 rgba(0,0,0,.07);
+}

@@ -1,0 +1,16 @@
+C:\Users\Tanjir\documents\visual studio 2013\Projects\Orbit\OrbitRepository\bin\Debug\OrbitRepository.dll.config
+C:\Users\Tanjir\documents\visual studio 2013\Projects\Orbit\OrbitRepository\bin\Debug\OrbitRepository.dll
+C:\Users\Tanjir\documents\visual studio 2013\Projects\Orbit\OrbitRepository\bin\Debug\OrbitRepository.pdb
+C:\Users\Tanjir\documents\visual studio 2013\Projects\Orbit\OrbitRepository\bin\Debug\EntityFramework.dll
+C:\Users\Tanjir\documents\visual studio 2013\Projects\Orbit\OrbitRepository\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Tanjir\documents\visual studio 2013\Projects\Orbit\OrbitRepository\bin\Debug\OrbitData.dll
+C:\Users\Tanjir\documents\visual studio 2013\Projects\Orbit\OrbitRepository\bin\Debug\OrbitEntity.dll
+C:\Users\Tanjir\documents\visual studio 2013\Projects\Orbit\OrbitRepository\bin\Debug\OrbitInterface.dll
+C:\Users\Tanjir\documents\visual studio 2013\Projects\Orbit\OrbitRepository\bin\Debug\OrbitData.pdb
+C:\Users\Tanjir\documents\visual studio 2013\Projects\Orbit\OrbitRepository\bin\Debug\OrbitEntity.pdb
+C:\Users\Tanjir\documents\visual studio 2013\Projects\Orbit\OrbitRepository\bin\Debug\OrbitInterface.pdb
+C:\Users\Tanjir\documents\visual studio 2013\Projects\Orbit\OrbitRepository\bin\Debug\EntityFramework.xml
+C:\Users\Tanjir\documents\visual studio 2013\Projects\Orbit\OrbitRepository\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Tanjir\documents\visual studio 2013\Projects\Orbit\OrbitRepository\obj\Debug\OrbitRepository.csprojResolveAssemblyReference.cache
+C:\Users\Tanjir\documents\visual studio 2013\Projects\Orbit\OrbitRepository\obj\Debug\OrbitRepository.dll
+C:\Users\Tanjir\documents\visual studio 2013\Projects\Orbit\OrbitRepository\obj\Debug\OrbitRepository.pdb

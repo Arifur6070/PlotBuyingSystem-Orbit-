@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="assets/fontawesome/css/all.css">
+    <link rel="stylesheet" type="text/css" href="assets/styles/css/custom.css">
+</head>
+<body ng-app="orbitAppModule">
+    <header class="clearfix" ng-controller="homeController">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top" style="border-bottom:1px solid rgba(128, 128, 128, .3)">
+            <div class="container">
+                <a class="navbar-brand" href="#!">
+                    <img src="assets/images/orbit.png" width="50px" alt="Orbit" />
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+                    <ul class="navbar-nav">
+                        <!-- <li class="nav-item">
+                            <a class="nav-link" href="#!">Home <span class="sr-only">(current)</span></a>
+                        </li> -->
+                        <li class="nav-item">
+                            <a class="nav-link" href="#!dashboard" ng-show="dashboardLinkVisible">Dashboard</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link nav-link-custom" href="#!post-ad"><i class="fas fa-thumbtack"></i> Post an Ad</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="btn btn-outline-primary" style="height: 40px;" ng-href="#!{{link}}">{{isLoggedIn}}</a>
+                        </li>                     
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <section class="clearfix"></section>
+    <div class="ng-view" ng-scope></div>
+
+    <section class="clearfix"></section>
+
+    <div class="footer" style="background: #3c3241;">
+        <div class="container">
+            <div class="row" style="padding-top: 20px;">
+                <div class="col-md-4">
+                    <h5 class="footer-heading">About Us</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="footer-anchor">About Our Orbit</a></li>
+                        <li><a href="#" class="footer-anchor">About Our Business</a></li>
+                        <li><a href="#" class="footer-anchor">Our Partners</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h5 class="footer-heading">Help &amp; Contact</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="footer-anchor">FAQ's</a></li>
+                        <li><a href="#" class="footer-anchor">Help Me Guide</a></li>
+                        <li><a href="#" class="footer-anchor">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h5 class="footer-heading">Privacy Policy</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="footer-anchor">Customers Emergency</a></li>
+                        <li><a href="#" class="footer-anchor">Help Center</a></li>
+                        <li><a href="#" class="footer-anchor">Privacy Statement</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>    
+
+    <script type="text/javascript" src="assets/jquery/jquery-3.3.1.js"></script>
+    <script type="text/javascript" src="assets/bootstrap/js/bootstrap.js"></script>
+    <script type="text/javascript" src="assets/fontawesome/js/all.js"></script>
+    <script src="assets/angular/angular.js"></script>
+    <script src="assets/angular/ngStorage.js"></script>
+    <script src="assets/angular/angular-route.js"></script>
+    <!-- Angular App Module -->
+    <script type="text/javascript" src="assets/scripts/app.js"></script>
+    <!-- Angular App Controller -->
+    <script type="text/javascript" src="assets/scripts/homeController.js"></script>
+    <script type="text/javascript" src="assets/scripts/userController.js"></script>
+    <script type="text/javascript" src="assets/scripts/profileController.js"></script>
+    <script type="text/javascript" src="assets/scripts/adPostController.js"></script>
+    <!-- Google Maps  -->
+    <script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBRP2irMuIY4YgUN2WRy523HB5vMmNO1D4&libraries=places">
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,88 @@
+<section class="clearfix">
+        <div class="container">
+            <div class="dashboard-section">
+                <div class="row">
+                    <div class="col-sm-3">
+                        <div class="list-group" style="padding: 10px 0 10px;">
+                            <a href="#!dashboard" class="list-group-item list-group-item-action"><i class="fas fa-tachometer-alt"></i> Dashboard</a>
+                            <a href="#!profile" class="list-group-item list-group-item-action active"><i class="fas fa-user-circle"></i> Profile</a>
+                            <a href="#!property" class="list-group-item list-group-item-action"><i class="fas fa-building"></i> Properties</a>
+                            <a href="#" class="list-group-item list-group-item-action"><i class="fas fa-cog"></i> Settings</a>
+                        </div>
+                    </div>
+                    <div class="col-sm-9">
+                        <div class="edit-profile clearfix" data-ng-init="getUser()">
+                            <h3>Edit Profile</h3>
+                            <hr />
+                                <div class="form-group row">
+                                    <input type="hidden" name="id" value="">
+                                </div>
+                                <div class="form-group row">
+                                    <label for="email" class="col-12 col-md-4 col-form-label">Name:</label>
+                                    <div class="col-12 col-md-8">
+                                        <input type="text" class="form-control" id="name" name="name" ng-model="name">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="email" class="col-12 col-md-4 col-form-label">Username:</label>
+                                    <div class="col-12 col-md-8">
+                                        <input type="text" class="form-control" id="username" name="username" ng-model="username" readonly="readonly">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="email" class="col-12 col-md-4 col-form-label">Email Address:</label>
+                                    <div class="col-12 col-md-8">                                        
+                                        <input type="email" class="form-control" id="email" name="email" ng-model="email" readonly="readonly">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="email" class="col-12 col-md-4 col-form-label">Phone Number:</label>
+                                    <div class="col-12 col-md-8">
+                                        <input type="text" class="form-control" id="phoneNum" name="phoneNum" ng-model="phoneNum">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="email" class="col-12 col-md-4 col-form-label">Address:</label>
+                                    <div class="col-12 col-md-8">
+                                        <input type="text" class="form-control" id="address" name="address" ng-model="address">
+                                    </div>
+                                </div>
+                                <div class="form-group row justify-content-end" style="padding-right:0;margin-right:0;">
+                                    <button type="submit" class="btn btn-primary" ng-click="updateProfile()">Save Changes</button>
+                                </div>
+
+                                <div class="change-password clearfix">
+                                    <h3>Change Password</h3>
+                                    <hr />
+                                    <div class="form-group row">
+                                        <label for="passwordErrorText" class="col-12 offset-6 col-form-label" style="color: #e74c3c;font-style: italic;" ng-show="passErrTxtVisible">{{passwordErrorText}}</label>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label for="email" class="col-12 col-md-4 col-form-label">Old Password:</label>
+                                        <div class="col-12 col-md-8">
+                                            <input type="password" class="form-control" id="oldPassword" name="oldPassword" ng-model="oldPassword">
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label for="email" class="col-12 col-md-4 col-form-label">New Password:</label>
+                                        <div class="col-12 col-md-8">
+                                            <input type="password" class="form-control" id="password" name="password" ng-model="newPassword">
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label for="email" class="col-12 col-md-4 col-form-label">Confirm Password:</label>
+                                        <div class="col-12 col-md-8">
+                                            <input type="password" class="form-control" id="confirmPassword" name="confirmPassword" ng-model="confirmPassword">
+                                        </div>
+                                    </div>
+                                    <div class="form-group row justify-content-end" style="padding-right:0;margin-right:0;">
+                                        <input type="submit" class="btn btn-primary" name="Submit" ng-click="updatePassword()" value="Change Password">
+                                    </div>
+                                </div>
+                        </div>                      
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>

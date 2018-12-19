@@ -1,0 +1,10 @@
+C:\Users\Tanjir\documents\visual studio 2013\Projects\Orbit\OrbitEntity\bin\Debug\OrbitEntity.dll.config
+C:\Users\Tanjir\documents\visual studio 2013\Projects\Orbit\OrbitEntity\bin\Debug\OrbitEntity.dll
+C:\Users\Tanjir\documents\visual studio 2013\Projects\Orbit\OrbitEntity\bin\Debug\OrbitEntity.pdb
+C:\Users\Tanjir\documents\visual studio 2013\Projects\Orbit\OrbitEntity\bin\Debug\EntityFramework.dll
+C:\Users\Tanjir\documents\visual studio 2013\Projects\Orbit\OrbitEntity\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Tanjir\documents\visual studio 2013\Projects\Orbit\OrbitEntity\bin\Debug\EntityFramework.xml
+C:\Users\Tanjir\documents\visual studio 2013\Projects\Orbit\OrbitEntity\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Tanjir\documents\visual studio 2013\Projects\Orbit\OrbitEntity\obj\Debug\OrbitEntity.dll
+C:\Users\Tanjir\documents\visual studio 2013\Projects\Orbit\OrbitEntity\obj\Debug\OrbitEntity.pdb
+C:\Users\Tanjir\documents\visual studio 2013\Projects\Orbit\OrbitEntity\obj\Debug\OrbitEntity.csprojResolveAssemblyReference.cache

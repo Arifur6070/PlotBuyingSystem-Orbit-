@@ -1,0 +1,154 @@
+app.controller('homeController', function($scope, $http) {
+	$scope.myMap = function() {
+		let mapOptions = {
+			zoom: 18,
+			minZoom: 12,
+			center: { lat: 37.37917, lng: -121.9498 },
+			mapTypeId: google.maps.MapTypeId.HYBRID,
+			mapTypeControl: false,
+			streetViewControl: false,
+			clickableIcons: false,
+			tilt: 45,
+			styles: [
+				{
+			        featureType: 'poi.business',
+			        stylers: [{visibility: 'off'}]
+			    },
+			    {
+			      featureType: 'poi.park',
+			      elementType: 'labels.text.fill',
+			      stylers: [{color: '#6b9a76'}]
+			    }
+			]
+		}
+    	$scope.map = new google.maps.Map(document.getElementById('map'), mapOptions);
+	    var markerIcon = {
+	        url: "assets/images/user-location.png",
+	        scaledSize: new google.maps.Size(40, 40)
+	    };
+	    if (navigator.geolocation) {
+	        navigator.geolocation.getCurrentPosition(function (position) {
+	            var marker = new google.maps.Marker({
+	                position: { lat: position.coords.latitude, lng: position.coords.longitude },
+	                map: $scope.map,
+	                title: 'Your Location',
+	                icon: markerIcon
+	            });
+	            $scope.map.setCenter(marker.position);
+	        })
+	    }
+
+	    $http.get('http://localhost:49352/api/properties')
+		.then(function(response){
+				$scope.propertyList = response.data;
+				$scope.setMarkers($scope.propertyList);
+                // console.log($scope.propertyList[0].latitude);
+        });
+
+	    
+	    $scope.placesAutoComplete();
+	}
+
+	$scope.placesAutoComplete = function() {
+		let input = document.getElementById('input-find');
+		let searchBox = new google.maps.places.SearchBox(input);
+
+		new google.maps.places.Autocomplete(input);
+
+		$scope.map.addListener('bounds_changed', function () {
+		    searchBox.setBounds($scope.map.getBounds());
+		});
+
+		searchBox.addListener('places_changed', function () {
+		    var places = searchBox.getPlaces();
+		    if (0 != places.length) {
+		        var bounds = new google.maps.LatLngBounds();
+		        places.forEach(function (place) {
+		            return place.geometry
+		                ? void (place.geometry.viewport
+		                        ? bounds.union(place.geometry.viewport)
+		                        : bounds.extend(place.geometry.location))
+		                    : void console.log("Returned place contains no geometry");
+		        });
+		        map.fitBounds(bounds);
+		    }
+		});
+	}
+
+
+	$scope.setMarkers = function(propertyList) {
+        var locations = propertyList;
+        var prop, info = [], fenway = []; //iconBase = 'http://maps.google.com/mapfiles/kml/pal3/';
+
+        var markerIcon = {
+	        url: "assets/images/property-home.png",
+	        scaledSize: new google.maps.Size(40, 40)
+	    };
+
+        var infowindow = new google.maps.InfoWindow();
+        console.log(locations.length);
+        for (var i = 0; i < locations.length; i++) {
+            prop = locations[i];
+            var marker = new google.maps.Marker({
+                position: {lat: parseFloat(prop.latitude), lng: parseFloat(prop.longitude)},
+                map: $scope.map,
+                title: prop.type,
+                animation: google.maps.Animation.BOUNCE,
+                //icon: iconBase + 'icon56.png'
+                icon: markerIcon
+            });
+
+            info.push(prop);
+            fenway.push(marker.getPosition());
+
+            google.maps.event.addListener(marker, 'click', (function(marker, i) {
+                return function() {
+                    let infoWindowContent = [
+                        '<div class="container">',
+                            '<div class="row">',
+                                '<div class="col-sm">',
+                                    '<div class="centered">',
+                                        '<p>' + info[i].type +'</p>',
+                                        '<p>' + info[i].description +'</p>',
+                                        '<p>' + info[i].price +'</p>',
+                                    '</div>',
+                                    '<div class="property-image">',
+                                        '<img class="img-thumbnail" alt="Cinque Terre" width="350" height="236" src="' + "https://tryingtobalancethemadness.files.wordpress.com/2011/12/property.jpg" + '" />',
+                                    '</div>',
+                                '</div>',
+                            '</div">',
+                        '</div>'
+                    ].join('');
+
+                    infowindow.setContent(infoWindowContent);
+                    infowindow.setOptions({maxWidth: 400});
+                    infowindow.open(map, marker);
+
+                    var panoView;
+                    var streetviewService = new google.maps.StreetViewService;
+                    streetviewService.getPanorama(
+                        {location: fenway[i]},
+                        function(result, status) {
+                            if (status === 'OK') {
+                                panoView = result;
+                                console.log(result);
+                                panorama = new google.maps.StreetViewPanorama(
+                                        document.getElementById('pano'), { pano: panoView.location.pano }
+                                    );
+                                map.setStreetView(panorama);
+
+                            } else {                               
+                                console.log("no result returned");
+                                panorama.setVisible(false);
+                            }
+                        });
+                }
+            }) (marker, i));
+        }
+    }
+
+
+
+});
+
+

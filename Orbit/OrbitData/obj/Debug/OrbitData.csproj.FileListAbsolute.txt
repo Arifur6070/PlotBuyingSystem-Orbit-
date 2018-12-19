@@ -1,0 +1,12 @@
+C:\Users\Tanjir\documents\visual studio 2013\Projects\Orbit\OrbitData\bin\Debug\OrbitData.dll.config
+C:\Users\Tanjir\documents\visual studio 2013\Projects\Orbit\OrbitData\bin\Debug\OrbitData.dll
+C:\Users\Tanjir\documents\visual studio 2013\Projects\Orbit\OrbitData\bin\Debug\OrbitData.pdb
+C:\Users\Tanjir\documents\visual studio 2013\Projects\Orbit\OrbitData\bin\Debug\EntityFramework.dll
+C:\Users\Tanjir\documents\visual studio 2013\Projects\Orbit\OrbitData\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Tanjir\documents\visual studio 2013\Projects\Orbit\OrbitData\bin\Debug\OrbitEntity.dll
+C:\Users\Tanjir\documents\visual studio 2013\Projects\Orbit\OrbitData\bin\Debug\OrbitEntity.pdb
+C:\Users\Tanjir\documents\visual studio 2013\Projects\Orbit\OrbitData\bin\Debug\EntityFramework.xml
+C:\Users\Tanjir\documents\visual studio 2013\Projects\Orbit\OrbitData\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Tanjir\documents\visual studio 2013\Projects\Orbit\OrbitData\obj\Debug\OrbitData.csprojResolveAssemblyReference.cache
+C:\Users\Tanjir\documents\visual studio 2013\Projects\Orbit\OrbitData\obj\Debug\OrbitData.dll
+C:\Users\Tanjir\documents\visual studio 2013\Projects\Orbit\OrbitData\obj\Debug\OrbitData.pdb

@@ -1,0 +1,117 @@
+<div data-ng-init="initializeMap()">
+
+    <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <div class="propertyDetails">
+            <table class="table table-borderless">
+                <tr>
+                    <td>Posted</td>
+                    <td ng-model="datePosted">{{datePosted}}</td>
+                    <td>Available From</td>
+                    <td ng-model="datePosted">{{datePosted}}</td>
+                </tr> 
+                <tr>
+                    <td>Bedrooms</td>
+                    <td ng-model="apartmentDetails.bedrooms">{{apartmentDetails.bedrooms}}</td>
+                    <td>Bathrooms</td>
+                    <td ng-model="apartmentDetails.bathrooms">{{apartmentDetails.bathrooms}}</td>
+                </tr>
+                <tr>
+                    <td>Size</td>
+                    <td ng-model="apartmentDetails.size">{{apartmentDetails.size}} sqft</td>
+                    <td>{{propCategory}}</td>
+                    <td ng-model="apartmentDetails.worth">{{apartmentDetails.worth}} {{propValText}}</td>
+                </tr>         
+            </table>
+            <table class="table table-borderless">
+                <tr>
+                    <td style="font-weight: 500;">Description</td>
+                </tr>          
+                <tr>
+                    <td ng-model="description">{{apartmentDetails.description}}</td>
+                </tr>
+                
+            </table>
+
+            <hr>
+            <div class="card">
+                <div class="card-body">
+                    <h6 ng-modle="contactDetails.name">{{contactDetails.name}}</h6>
+                    <div class="clearfix">
+                        <span class="float-left"><p>Posting for 11+ years</p></span>
+                        <span class="float-right"><button class="btn btn-link">See all ads</button></span>
+                    </div>                 
+                    <hr>
+                    <h6 ng-modle="contactDetails.name">Contact {{contactDetails.name}}</h6>
+                    <div class="clearfix" style="margin-bottom: 5px;">
+                        <span class="float-left"><h6 ng-model="phoneNum"><i class="fas fa-phone"></i> {{contactDetails.phoneNum}}</h6></span>
+                        <span class="float-right"><button class="btn btn-light">Reveal</button></span>
+                    </div>            
+                    <button type="button" class="btn btn-block btn-outline-danger"><i class="fas fa-envelope"></i> Email</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<div id="main">
+  
+    <div class="location-finder" id="location-finder">
+        <div class="location-input">
+            <div class="container">
+                <div class="form-group" style="padding-top: 10px;">
+                    <input type="text" class="form-control form-control-sm" id="input-find" placeholder="Search your desired location" />
+                </div>
+                <div class="form-group form-group-custom">
+                    <label for="propertyType" style="font-weight: 300">Select property type:</label>
+                    <select class="form-control form-control-sm" id="propertyType" name="propertyType" ng-model="propertyType">
+                        <option value="apartments">Apartment</option>
+                        <option value="houses">House</option>
+                        <option value="lands">Lands</option>
+                        <option value="others">Other</option>
+                    </select>
+                </div>
+                <div class="form-group form-group-custom">
+                    <label for="propertyCategory" style="font-weight: 300">You want to buy or rent? </label>
+                    <select class="form-control form-control-sm" id="categoryId" name="categoryId" ng-model="categoryId">
+                        <option value="1">Buy</option>
+                        <option value="2">Rent</option>
+                    </select>
+                </div>
+                <hr>
+                <h6 style="font-weight: 300">Select range</h6>
+                <hr>
+                <div class="form-group row">                        
+                    <div class="col-6">
+                        <input class="form-control form-control-sm" type="text" id="min-price" placeholder="max">
+                      </div>  
+                      <div class="col-6">
+                        <input class="form-control form-control-sm" type="text" id="max-price" placeholder="min">
+                      </div>    
+                </div>
+                <div class="form-group">
+                    <button class="btn btn-primary btn-block btn-sm" ng-click="searchProperties()">Submit Search</button>
+                </div>
+
+            </div>         
+        </div>
+    </div>
+
+    <div class="map-section">
+        <div id="map" style="width:100%;height:600px;position:relative;overflow:hidden;"></div>   
+    </div>
+
+    <script>
+        function closeNav() {
+            document.getElementById("mySidenav").style.width = "0";
+            document.getElementById("main").style.marginLeft= "0";
+        }
+    </script>
+
+    <!-- <section class="clearfix"></section> -->
+<!--<div class="street-view-section">
+        <div id="panorama-view" class="panorama-view" style="width:inherit;height:inherit;"></div>
+    </div> -->
+</div>
+
+
+    

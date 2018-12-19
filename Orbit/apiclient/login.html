@@ -1,0 +1,60 @@
+<body style="background-color:#34495e;">
+    <section class="clearfix login-section" ng-app="loginModule" ng-controller="userController">
+        <div class="container">
+            <div class="login-box" id="login-box" style="margin-top:170px;">
+
+                    <div class="form-group row" ng-show="loginErrorTxtVisible">
+                        <label class="offset-2 form-label" style="color: #e74c3c;">{{loginErrorTxt}}</label>
+                    </div>
+
+                    <div class="form-group row">
+
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                                <div class="input-group-text"><i class="fas fa-user"></i></div>
+                            </div>
+                            <input type="text" class="form-control" id="username" ng-model="username" placeholder="Username">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                                <div class="input-group-text"><i class="fas fa-key"></i></i></div>
+                            </div>
+                            <input type="password" class="form-control" id="password" ng-model="password" placeholder="Password">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <button class="btn btn-outline-primary btn-block btn-md" ng-click="login()">Sign in</button>
+                    </div>
+                    <div class="form-group row">
+                        <div class="input-group input-group-md">
+                            <div class="input-group-prepend">
+                                <div class="btn btn-primary" style="border-right:1px solid #ffffff"><i class="fab fa-google"></i></div>
+                            </div>
+                            <input type="submit" class="form-control btn btn-outline-primary" value="Sign in with Google">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <div class="btn-group col">
+                            <a href="registration.html" class="btn btn-link">Create An Account</a>
+                            <a href="#" class="btn btn-link">Forgot Password?</a>
+                        </div>
+                    </div>
+
+            </div>
+        </div>
+    </section>
+
+    <script>
+        function loginResize() {
+            var height = window.innerHeight;
+            height = Math.max(10, (height - 650) / 2);
+            document.getElementById("login-box").style.marginTop = "" + height + "px";
+        }
+        loginResize();
+        window.onresize = function () {
+            loginResize();
+        };
+    </script>
+
